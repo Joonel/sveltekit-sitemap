@@ -5,7 +5,7 @@ import { generateRobots, generateSitemap } from "./utils";
 export const sitemapHook =
     <S extends RO_Sitemap>(sitemap: S, params: SitemapParams<S> | undefined = {}): Handle =>
     async ({ event, resolve }) => {
-        if (event.url.origin.startsWith("www.")) {
+        if (event.url.host.startsWith("www.")) {
             throw new Redirect(301, event.url.href.replace("www.", ""));
         }
 
