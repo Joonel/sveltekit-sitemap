@@ -1,4 +1,4 @@
-import { Redirect, type Handle } from "@sveltejs/kit";
+import { type Handle } from "@sveltejs/kit";
 import type { SitemapParams, RO_Sitemap } from "./types";
 import { generateRobots, generateSitemap } from "./utils";
 
@@ -6,7 +6,12 @@ export const sitemapHook =
     <S extends RO_Sitemap>(sitemap: S, params: SitemapParams<S> | undefined = {}): Handle =>
     async ({ event, resolve }) => {
         if (event.url.host.startsWith("www.")) {
-            throw new Redirect(301, event.url.href.replace("www.", ""));
+            return new Response(null, {
+                status: 301,
+                headers: {
+                    location: event.url.href.replace("//www.", "//"),
+                },
+            });
         }
 
         if (event.url.pathname === "/sitemap.xml") {
