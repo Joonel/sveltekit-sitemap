@@ -27,7 +27,6 @@ export type Sitemap = typeof sitemap
     name: "sveltekit-sitemap",
     configureServer(server: ViteDevServer) {
       server.watcher
-        .add([routesDir])
         .on("add", updateSitemap)
         .on("unlink", updateSitemap)
         .on("unlinkDir", updateSitemap);
