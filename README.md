@@ -1,3 +1,11 @@
+# Changes made by Joonel (me)
+
+This is a fork of https://github.com/beynar/sveltekit-sitemap
+Actually I fixed all currently opened issues of the original repo (screenshot below). Priority tags removed completely as they are vestigial.
+
+![image](https://github.com/Joonel/sveltekit-sitemap/assets/69682842/3569f6e8-f755-4392-8c3f-f8e1ed0ad657)
+
+
 # sveltekit-sitemap (and robots)
 
 This library is designed to help generate and maintain dynamic sitemap.xml and robots.txt for their SvelteKit apps.
