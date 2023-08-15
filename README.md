@@ -3,7 +3,8 @@
 This is a fork of https://github.com/beynar/sveltekit-sitemap
 Actually I fixed all currently opened issues of the original repo (screenshot below). Priority tags removed completely as they are vestigial.
 
-![image](https://github.com/Joonel/sveltekit-sitemap/assets/69682842/3569f6e8-f755-4392-8c3f-f8e1ed0ad657)
+![image](https://github.com/Joonel/sveltekit-sitemap/assets/69682842/28311702-5343-41e5-ab90-8d18ec37229c)
+
 
 
 # sveltekit-sitemap (and robots)
@@ -17,15 +18,7 @@ This library is not meant to generate a static sitemap at build time. It's there
 ## Usage
 
 ```shell
-pnpm add sveltekit-sitemap
-```
-
-```shell
-npm i sveltekit-sitemap
-```
-
-```shell
-yarn add sveltekit-sitemap
+npm install Joonel/sveltekit-sitemap
 ```
 
 1. Add the vite plugin
@@ -91,7 +84,7 @@ RouteDefinition
 | path       | string               | ✔        |
 | lastMod    | string               | ⛌        |
 | changeFreq | string               | ⛌        |
-| priority   | string               | ⛌        |
+| ~~priority~~   | string               | ⛌        |
 | image      | RouteDefinitionImage | ⛌        |
 
 RouteDefinitionImage
